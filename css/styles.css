@@ -1,0 +1,394 @@
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+/*               全域                  */
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body{
+  /*background-color: gray;*/
+  margin:0px;;
+}
+h4, p, a{
+  color: #C1823D;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+#Header{
+  width:100%;
+  /*background-color: yellow;*/
+}
+#Header>.Container{
+  width: 100%;
+  overflow: hidden;
+}
+.Container{
+  width:90%;
+  background-color: white;
+  margin: auto;
+}
+#Hot{
+  width:100%;
+  background-image: url(../images/bg_01.png);
+  background-repeat: repeat;
+}
+
+/*塊級元素:當滑鼠游標滑向 menuicon區域 就會顯示手型*/
+.DB{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/*讓塊級元素中的連結文字隱藏*/
+.SrOnly{
+  position: absolute;
+  width:1px;
+  height: 1px;
+  border: 0px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  }
+  .BGEdit{
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  #MenuIcon{
+    width: 20.833%;
+    height: 100px;
+    /*background-color: black;*/
+    background-image: url(../images/icon/icon_menu.png);
+    float: left;
+  }
+
+  #Logo{
+    width: 40%;
+    height: 100px;
+    background-image: url(../images/logo_3.png);
+    float: left;
+    margin-top: 0px;
+    vertical-align:bottom;
+  }
+
+  #MemberContent{
+    width: 31.25%;
+    height: 100px;
+    float: right;
+    margin-right: 5%;
+  }
+  #MemberContent>div{
+    float: left;
+    width: 50%;
+    height: 100px;
+  }
+  #MemberIcon{
+    width: 100%;
+    height: 100px;
+    background-image: url(../images/icon/icon_member.png);
+    display: block;
+  }
+  #CartIcon{
+    width: 100%;
+    height: 100px;
+    background-image: url(../images/icon/icon_cart.png);
+    display: block;
+  }
+  #PrimaryNavigation{
+    width: 100%;
+    background-color: pink;
+    float: left;
+    display: none;
+  }
+  #PrimaryNavigation>ul{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  }
+  #PrimaryNavigation>ul>li{
+    width: 100%;
+    height: 50px;
+    background-color: #D7BA8B;
+    border-bottom: 1px solid white;
+    text-align: center;
+    line-height: 50px;
+  }
+  #PrimaryNavigation>ul>li>a{
+    text-decoration: none;
+    color: #fff;
+    /*font-family: "微軟正黑體";*/
+  }
+  #PrimaryNavigation>ul>li>a:hover{
+    background-color: white;
+    color: #D7BA8B;
+  }
+  #BannerContent{
+    width:100%;
+  }
+  #BannerContent img{
+    width: 100%;
+    vertical-align: bottom;
+  }
+  .NewsContent{
+    width: 100%;
+    /*background-color: pink;*/
+  }
+  #News .wrap{
+    width: 100%;
+    margin-right: 20px;
+  }
+  #News img{
+    vertical-align: bottom;
+  }
+  .NewsImg{
+    display: none;
+  }
+
+  .NewsDate{
+    color: #8f8e1b;
+    margin-left: 5px;
+  }
+  .NewsTitle>a{
+    margin-left: 5px;
+    color:black;
+    font-family: "微軟正黑體";
+    font-weight: bold ;
+  }
+  #Hot .wrap{
+    position: relative;
+  }
+  .HotImg{
+    width: 100%;
+  }
+  .HotName a{
+    text-align: center;
+    display: block;
+  }
+  .TipTag{
+    top:-20px;
+    right:15px;
+    width: 50px;
+    height: 50px;
+    /*background-color: #a4234d;*/
+    position: absolute;
+  }
+  #Footer, #FooterLogo{
+    background-color: white;
+    font-family:"微軟正黑體";
+    color:brown;
+  }
+  #FooterLogo>a>img{
+    margin-top: 20px;
+    width: 50%;
+  }
+  #Copyrights{
+    width: 100%;
+    height: 50px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+  }
+  .Container img{
+    width: 100%;
+  }
+  #Banner{
+    clear: both;
+  }
+  #PageTop{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    border-radius:50px;
+    display: none;
+  }
+  #PageTop a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+  }
+
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+/*             手機轉置                  */
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+@media screen and (min-width: 481px) {
+    /* 如果使用者視窗寬度大於等於481px，將會載入這裡的 CSS。*/
+    /*body{
+    background-color: red;
+    }*/
+
+
+}
+
+
+
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+/*              平 板                  */
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+@media screen and (min-width: 768px) {
+    /* 如果使用者視窗寬度介於 768px ~ 979px，將會再載入這裡的 CSS。 */
+    body{
+    /*background-color: orange;*/
+    }
+    #Header>.Container{
+      width:100% ;
+    }
+    #News{
+      width:100%;
+      background-image: url(../images/bg_02.png);
+    }
+    #Hot{
+      width:100%;
+      background-image: url(../images/bg_01.png);
+    }
+    /*塊級元素:手機轉平板時 menuicon會消失*/
+    #MenuIcon{
+      display: none;
+    }
+    #Logo{
+      width:29.64%;
+      margin-bottom: 2.21%;
+      margin-left:0px;
+
+    }
+    #MemberContent{
+      width: 90px;
+      height: 45px;
+      margin-top: 0px;
+    }
+    #MemberContent>div{
+      width: 45px;
+      height: 45px;
+    }
+    #PrimaryNavigation{
+      width: 47.864%;
+      float: right;
+      margin-right:5%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      display: block;
+    }
+    #PrimaryNavigation>ul>li{
+      width: 20%;
+      border:none;
+      background-color: white;
+      float: left;
+    }
+    #PrimaryNavigation>ul>li>a{
+      color: #D7BA8B;
+    }
+    #BannerContent img{
+      width: 100%;
+      /*background-color: pink;*/
+    }
+    .NewsContent{
+      width: 32%;
+      /*background-color: pink;*/
+      float: left;
+      margin-right: 1%;
+    }
+    .Container{
+      overflow: hidden;
+    }
+    .wrap{
+      width: 95%;
+      /*background-color: gray;*/
+    }
+    .NewsImg{
+      display: block;
+    }
+    .PCContent{
+      margin-bottom: 15px;
+      overflow:hidden;
+    }
+    .PCImgContent{
+      width: 57.2%;
+      /*background-color: brown;*/
+      float: left;
+    }
+    /*把區域對調*/
+    .PCImgRight{
+      float:right;
+    }
+    .PCDecription{
+      float: left;
+      width: 42.8%;
+      height: 280px;
+      /*background-color: orange;*/
+    }
+    .PCDecription p{
+      text-align: center ;
+    }
+    .HotContent{
+      width: 33.33333333333333%;
+      float:left;
+    }
+    #ContactContent,#SocietyContent{
+      width: 50%;
+      float: left;
+    }
+    #SocietyContent{
+      text-align: right;
+    }
+    #FacebookIcon,#GooglePlus,#FacebookIcon>a,#GooglePlus>a{
+      display: inline;
+    }
+    #FacebookIcon i{
+      font-size:28px;
+      color:#3b5998 ;
+    }
+    #GooglePlus i{
+      font-size: 28px;
+      color: #dd4a38;
+    }
+  }
+
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+/*               PC版                  */
+/*/////////////////////////////////////*/
+/*/////////////////////////////////////*/
+@media screen and (min-width: 980px) {
+    /* 如果使用者視窗寬度介於 768px ~ 979px，將會再載入這裡的 CSS。 */
+  body{
+    /*background-color: purple;*/
+    }
+  .Container ,#Header>.Container{
+    max-width:1170px;
+  }
+  #News{
+    width:100%;
+
+  }
+  #Hot{
+    width:100%;
+    background-image: url(../images/bg_01.png);
+  }
+  #PrimaryNavigation>ul>li>a:hover{
+    background-color: #D7BA8B;
+    color: white;
+  }
+  #BannerLeft{
+    width: 5%;
+    height: 350px;
+    /*background-color: #999999;*/
+    float: left;
+  }
+  #BannerContent{
+    width: 90%;
+    float: left;
+  }
+  #BannerRight{
+    width: 5%;
+    height: 350px;
+    /*background-color: #666666;*/
+    float: left;
+  }
+}
